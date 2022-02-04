@@ -1,12 +1,10 @@
 from requests_html import HTMLSession, HTML
-import csv
+
 html = HTML
-#csv_file = open('page_scrape.csv', 'w')
-#csv_writer = csv.writer(csv_file)
-#csv_writer.writerow(['title', 'desc', 'link'])
+
 
 s = HTMLSession()
-url = 'https://duckduckgo.com/?q=cnn&t=h_&ia=web'
+url = 'https://duckduckgo.com/?q=microsoft&t=h_&ia=web'
 
 r = s.get(url)
 
@@ -15,7 +13,7 @@ r.html.render(sleep=1)
 links = r.html.xpath('//*[@id="links"]', first=True)
 print(links)
 
-
+print(links.absolute_links)
 
 
 
