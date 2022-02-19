@@ -41,7 +41,7 @@ for i in list:
         if ('.pdf' in pdf):
             print('Downloading File ' + pdf)
 
-            with open('/home/dominik/cifs/mycloud/Survival/' + title + '/' + pdf[39:], 'wb') as f:
+            with open(dir + title + '/' + pdf[39:], 'wb') as f:
                 f.write(g.content)
                 f.close()
         print(pdf + 'Downloaded')
