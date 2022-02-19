@@ -1,5 +1,5 @@
 import html
-import selenium
+import SelSearch
 import requests.models
 from bs4 import BeautifulSoup
 import requests_html
